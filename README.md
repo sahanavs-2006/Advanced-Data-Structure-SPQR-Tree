@@ -10,35 +10,67 @@ Access the live application here: **[https://urban-flow-guardian-main.vercel.app
 ## 📺 Video Walkthrough
 Watch the system in action: **[Full Project Demonstration & SPQR Logic Overview](https://drive.google.com/file/d/1LMEfdguNcsETBH8DTsGoyKDnESaBHU1G/view?usp=sharing)**
 
-## About
+## 📷 System Gallery
 
-This system leverages **SPQR Tree decomposition** (Hopcroft-Tarjan algorithm) to identify structural vulnerabilities in critical infrastructure networks. By decomposing networks into Series, Parallel, and Rigid components, it detects biconnected components, articulation points, and bridges to evaluate network resilience against single-point failures.
+### 1. SPQR Tree Decomposition
+![SPQR Decomposition](./screenshots/spqr-decomposition.png)
+*Visualizing the structural decomposition into Series (vulnerable), Parallel (redundant), and Rigid (complex core) components.*
 
-## Technologies
+### 2. Pathfinding & Flow Analysis
+![Pathfinding Analysis](./screenshots/pathfinding-analysis.png)
+*Analyzing optimal routes and multi-path redundancy between critical infrastructure nodes.*
 
-This project is built with:
+### 3. Structural Redundancy Evaluation
+![Structural Redundancy](./screenshots/structural-redundancy.png)
+*Automated calculation of network redundancy scores and identification of planar vs. non-planar topologies.*
 
-- **Vite** - Next-generation frontend build tool
-- **TypeScript** - Type-safe JavaScript
-- **React** - Component-based UI library
-- **shadcn/ui** - Beautifully designed components
-- **Tailwind CSS** - Utility-first CSS framework
+### 4. Vulnerability & Bridge Detection
+![Vulnerability Detection](./screenshots/vulnerability-detection.png)
+*Real-time highlighting of 'Bridges' (critical single points of failure) and 'Articulation Points' within the network.*
 
-## Getting Started
+## 🛠️ Core Functionality
+
+### 1. SPQR Decomposition (Hopcroft-Tarjan Algorithm)
+The heart of the system is the implementation of SPQR tree decomposition. This allows us to break down any biconnected graph into four node types:
+- **S-Nodes (Series):** Represents linear chains. In infrastructure, these are "bottlenecks" where any failure disconnects the flow.
+- **P-Nodes (Parallel):** Represents redundant paths. These are the "safe zones" of a network where traffic can be rerouted.
+- **R-Nodes (Rigid):** Represents complex, 3-connected meshes that provide maximum stability.
+- **Q-Nodes:** Represents basic edges (simplified in our visualization).
+
+### 2. Real-time Infrastructure Analysis
+The system provides a dashboard that calculates:
+- **Redundancy Score:** A percentage-based metric of how much of your network is protected by alternative routes.
+- **Critical Edge Detection:** Using Tarjan's bridge-finding algorithm to highlight edges that, if cut, would isolate parts of the city.
+- **Planarity Testing:** Determining if the network can be laid out without "wire-crossings," which is vital for VLSI design and urban planning.
+
+### 3. Interactive Simulation
+- **Dynamic Graph Manipulation:** Add/remove nodes and edges in real-time to simulate infrastructure failures.
+- **Network Presets:** Includes templates for City Roads, Power Grids, Railway Networks, and Microservices.
+
+## 💻 Technical Stack
+
+- **Frontend:** React with TypeScript
+- **Styling:** CSS3, Tailwind CSS, shadcn/ui
+- **Algorithms:** Custom TypeScript implementations of:
+  - Tarjan's Biconnected Components
+  - Hopcroft-Tarjan SPQR Logic
+  - Planarity Verification
+  - Dijkstra/BFS for Pathfinding
+- **Visualization:** D3-inspired custom SVG rendering engine
+
+## 🚀 Getting Started
 
 ### Prerequisites
-
 - Node.js (v18 or higher)
 - npm or yarn
 
 ### Installation
-
 ```sh
 # Clone the repository
-git clone <YOUR_GIT_URL>
+git clone https://github.com/sahanavs-2006/Advanced-Data-Structure-SPQR-Tree.git
 
 # Navigate to the project directory
-cd urban-flow-guardian
+cd Advanced-Data-Structure-SPQR-Tree
 
 # Install dependencies
 npm install
@@ -49,24 +81,5 @@ npm run dev
 
 The application will be available at `http://localhost:8080`
 
-## Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run test` - Run tests
-- `npm run lint` - Run ESLint
-
-## Deployment
-
-Build the project for production:
-
-```sh
-npm run build
-```
-
-The built files will be in the `dist` directory, ready to be deployed to any static hosting service.
-
-## License
-
+## 📄 License
 MIT License
