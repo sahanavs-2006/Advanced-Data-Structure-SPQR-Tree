@@ -1,0 +1,184 @@
+[
+  {
+    "name": "City Road Network",
+    "icon": "🏙️",
+    "graphNodes": 8,
+    "graphEdges": 11,
+    "spqr": {
+      "series": 0,
+      "parallel": 0,
+      "rigid": 1,
+      "total": 1
+    },
+    "bridges": [],
+    "articulationPoints": [],
+    "spqrNodes": [
+      {
+        "id": "spqr-r-0",
+        "type": "R",
+        "nodes": 8,
+        "edges": 11
+      }
+    ]
+  },
+  {
+    "name": "Power Grid",
+    "icon": "⚡",
+    "graphNodes": 10,
+    "graphEdges": 13,
+    "spqr": {
+      "series": 0,
+      "parallel": 0,
+      "rigid": 1,
+      "total": 1
+    },
+    "bridges": [],
+    "articulationPoints": [],
+    "spqrNodes": [
+      {
+        "id": "spqr-r-0",
+        "type": "R",
+        "nodes": 10,
+        "edges": 13
+      }
+    ]
+  },
+  {
+    "name": "Railway Network",
+    "icon": "🚂",
+    "graphNodes": 8,
+    "graphEdges": 12,
+    "spqr": {
+      "series": 0,
+      "parallel": 0,
+      "rigid": 1,
+      "total": 1
+    },
+    "bridges": [],
+    "articulationPoints": [],
+    "spqrNodes": [
+      {
+        "id": "spqr-r-0",
+        "type": "R",
+        "nodes": 8,
+        "edges": 12
+      }
+    ]
+  },
+  {
+    "name": "Microservices",
+    "icon": "🔗",
+    "graphNodes": 7,
+    "graphEdges": 9,
+    "spqr": {
+      "series": 0,
+      "parallel": 0,
+      "rigid": 1,
+      "total": 1
+    },
+    "bridges": [],
+    "articulationPoints": [],
+    "spqrNodes": [
+      {
+        "id": "spqr-r-0",
+        "type": "R",
+        "nodes": 7,
+        "edges": 9
+      }
+    ]
+  },
+  {
+    "name": "ISP Backbone",
+    "icon": "🌐",
+    "graphNodes": 9,
+    "graphEdges": 10,
+    "spqr": {
+      "series": 4,
+      "parallel": 0,
+      "rigid": 1,
+      "total": 5
+    },
+    "bridges": [
+      "POP A - User 1",
+      "POP A - User 2",
+      "POP B - User 3",
+      "POP B - User 4"
+    ],
+    "articulationPoints": [
+      "POP A",
+      "POP B"
+    ],
+    "spqrNodes": [
+      {
+        "id": "spqr-s-0",
+        "type": "S",
+        "nodes": 2,
+        "edges": 1
+      },
+      {
+        "id": "spqr-s-1",
+        "type": "S",
+        "nodes": 2,
+        "edges": 1
+      },
+      {
+        "id": "spqr-s-2",
+        "type": "S",
+        "nodes": 2,
+        "edges": 1
+      },
+      {
+        "id": "spqr-s-3",
+        "type": "S",
+        "nodes": 2,
+        "edges": 1
+      },
+      {
+        "id": "spqr-r-4",
+        "type": "R",
+        "nodes": 5,
+        "edges": 6
+      }
+    ]
+  },
+  {
+    "name": "VLSI Circuit",
+    "icon": "🔌",
+    "graphNodes": 14,
+    "graphEdges": 21,
+    "spqr": {
+      "series": 2,
+      "parallel": 0,
+      "rigid": 1,
+      "total": 3
+    },
+    "bridges": [
+      "IN_A - NAND1",
+      "IN_B - NAND2"
+    ],
+    "articulationPoints": [
+      "NAND1",
+      "NAND2"
+    ],
+    "spqrNodes": [
+      {
+        "id": "spqr-s-0",
+        "type": "S",
+        "nodes": 2,
+        "edges": 1
+      },
+      {
+        "id": "spqr-s-1",
+        "type": "S",
+        "nodes": 2,
+        "edges": 1
+      },
+      {
+        "id": "spqr-r-2",
+        "type": "R",
+        "nodes": 12,
+        "edges": 19
+      }
+    ]
+  }
+]
