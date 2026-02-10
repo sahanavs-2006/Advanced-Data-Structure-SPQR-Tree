@@ -7,6 +7,9 @@ Advanced robustness analysis system for critical infrastructure networks.
 ## 🚀 Live Demo
 Access the live application here: **[https://urban-flow-guardian-main.vercel.app](https://urban-flow-guardian-main.vercel.app)**
 
+## 📺 Video Walkthrough
+Watch the system in action: **[Full Project Demonstration & SPQR Logic Overview](https://drive.google.com/file/d/1LMEfdguNcsETBH8DTsGoyKDnESaBHU1G/view?usp=sharing)**
+
 ## About
 
 This system leverages **SPQR Tree decomposition** (Hopcroft-Tarjan algorithm) to identify structural vulnerabilities in critical infrastructure networks. By decomposing networks into Series, Parallel, and Rigid components, it detects biconnected components, articulation points, and bridges to evaluate network resilience against single-point failures.
